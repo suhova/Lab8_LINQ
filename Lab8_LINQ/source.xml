@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<subscribers>
+  <subscriber>
+    <surname>Долгополов</surname>
+    <district>Невский</district>
+    <address>пр. Большевиков, д. 3</address>
+    <phone>88005553535</phone>
+    <contractNum>1</contractNum>
+    <installPayment>200</installPayment>
+    <contractDate>20.12.2010</contractDate>
+    <monthlyFee>250</monthlyFee>
+    <lastPaymentDay>10.04.2018</lastPaymentDay>
+  </subscriber>
+  <subscriber>
+    <surname>Селегей</surname>
+    <district>Центральный</district>
+    <address>Невский пр., д. 101</address>
+    <phone>88005556565</phone>
+    <contractNum>2</contractNum>
+    <installPayment>400</installPayment>
+    <contractDate>25.08.2015</contractDate>
+    <monthlyFee>1300</monthlyFee>
+    <lastPaymentDay>10.04.2019</lastPaymentDay>
+  </subscriber>
+  <subscriber>
+    <surname>Оганисян</surname>
+    <district>Василеостровский</district>
+    <address>Большой пр. ВО, д. 12</address>
+    <phone>88005554545</phone>
+    <contractNum>3</contractNum>
+    <installPayment>100</installPayment>
+    <contractDate>25.02.2003</contractDate>
+    <monthlyFee>1000</monthlyFee>
+    <lastPaymentDay>13.04.2016</lastPaymentDay>
+  </subscriber>
+  <subscriber>
+    <surname>Квашонкин</surname>
+    <district>Василеостровский</district>
+    <address>Большой пр. ВО, д. 14</address>
+    <phone>88005551515</phone>
+    <contractNum>4</contractNum>
+    <installPayment>600</installPayment>
+    <contractDate>22.02.2003</contractDate>
+    <monthlyFee>1400</monthlyFee>
+    <lastPaymentDay>13.02.2016</lastPaymentDay>
+  </subscriber>
+  <subscriber>
+    <surname>Бухаров</surname>
+    <district>Красногвардейский</district>
+    <address>Среднеохтинский пр., д 10</address>
+    <phone>88005550505</phone>
+    <contractNum>5</contractNum>
+    <installPayment>340</installPayment>
+    <contractDate>12.10.2004</contractDate>
+    <monthlyFee>1300</monthlyFee>
+    <lastPaymentDay>30.12.2016</lastPaymentDay>
+  </subscriber>
+  <subscriber />
+</subscribers>
