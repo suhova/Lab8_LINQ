@@ -15,6 +15,7 @@ namespace Lab8_LINQ
     {
         public int paramIndex = 0;
         public string paramValue = "";
+        public string source = "../../../source.xml";
         public MainForm()
         {
             InitializeComponent(); showAll(null, null);
@@ -31,7 +32,7 @@ namespace Lab8_LINQ
         {
             try
             {
-                XDocument xdoc = XDocument.Load("../../../source.xml");
+                XDocument xdoc = XDocument.Load(source);
                 var subscribers = xdoc.Element("subscribers");
                 tableView.Text = "";
                 foreach (XElement xe in subscribers.Elements("subscriber"))
@@ -115,7 +116,7 @@ namespace Lab8_LINQ
         {
             try
             {
-                XDocument.Load("../../../source.xml").Save("../../../source.xml");
+                XDocument.Load(source).Save(source);
                 MessageBox.Show("Изменения успешно сохранены!");
             }
             catch
@@ -149,7 +150,7 @@ namespace Lab8_LINQ
                     break;
             }
             this.tableView.Text = "";
-            var res = XDocument.Load("../../../source.xml").Element("subscribers").Elements("subscriber").Where(s => s.Element(param).Value.ToLower().Contains(str.ToLower()));
+            var res = XDocument.Load(source).Element("subscribers").Elements("subscriber").Where(s => s.Element(param).Value.ToLower().Contains(str.ToLower()));
             foreach (XElement xe in res)
             {
                 this.tableView.Text += getSubsInfo(xe);

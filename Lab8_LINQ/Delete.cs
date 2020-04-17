@@ -31,7 +31,7 @@ namespace Lab8_LINQ
             IEnumerable<XElement> deleteQuery = null;
             try
             {
-                XDocument xdoc = XDocument.Load("../../../source.xml");
+                XDocument xdoc = XDocument.Load(context.source);
                 deleteQuery = xdoc.Element("subscribers").Elements("subscriber").Where(s => s.Element("contractNum").Value == delTxtBox.Text);
 
                 if (deleteQuery.Count() == 0)

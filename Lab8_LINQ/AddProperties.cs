@@ -43,7 +43,7 @@ namespace Lab8_LINQ
                     "Дата последнего платежа: " + lastPaymentDayTxtBox.Text + Environment.NewLine + Environment.NewLine;
                 try
                 {
-                    XDocument xdoc = XDocument.Load("../../../source.xml");
+                    XDocument xdoc = XDocument.Load(context.source);
                     xdoc.Element("subscribers").Add(new XElement("subscriber",
                         new XElement("surname", surnameTxtBox.Text),
                         new XElement("district", districtTxtBox.Text),
