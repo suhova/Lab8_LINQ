@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab8_LINQ", "Lab8_LINQ\Lab8_LINQ.csproj", "{FDA595B3-59C1-459A-8EB7-FB3AC73E6AEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab8_LINQ", "Lab8_LINQ\Lab8_LINQ.csproj", "{FDA595B3-59C1-459A-8EB7-FB3AC73E6AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab8_Test", "Lab8_Test\Lab8_Test.csproj", "{49FA363E-EEDB-41EB-94DC-CF7D46ABD217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FDA595B3-59C1-459A-8EB7-FB3AC73E6AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA595B3-59C1-459A-8EB7-FB3AC73E6AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA595B3-59C1-459A-8EB7-FB3AC73E6AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FA363E-EEDB-41EB-94DC-CF7D46ABD217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FA363E-EEDB-41EB-94DC-CF7D46ABD217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FA363E-EEDB-41EB-94DC-CF7D46ABD217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FA363E-EEDB-41EB-94DC-CF7D46ABD217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,15 +15,15 @@ namespace Lab8_LINQ
     {
         public int paramIndex = 0;
         public string paramValue = "";
-        public string source = "../../../source.xml";
+        public static string source = "../../../source.xml";
         public MainForm()
         {
-            InitializeComponent(); showAll(null, null);
+            InitializeComponent();
+            showAll(null, null);
             this.showAllToolStripMenuItem.Click += new EventHandler(showAll);
             this.clearToolStripMenuItem.Click += new EventHandler(clear);
             this.deleteToolStripMenuItem.Click += new EventHandler(OnDelClick);
             this.setSearchToolStripMenuItem.Click += new System.EventHandler(this.OnSetSearchClick);
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.OnSaveClick);
         }
         /// <summary>
         /// Вывести всех абонентов
@@ -43,7 +43,6 @@ namespace Lab8_LINQ
             catch (Exception ex)
             {
                 MessageBox.Show("Произошла ошибка:\n" + ex.Message, "Ошибка");
-                return;
             }
         }
         /// <summary>
@@ -71,7 +70,10 @@ namespace Lab8_LINQ
             XElement monthlyFee = xe.Element("monthlyFee");
             XElement lastPaymentDay = xe.Element("lastPaymentDay");
 
-            if (surname != null && district != null && address != null && phone != null && installPayment != null && contractNum != null && contractDate != null && monthlyFee != null && lastPaymentDay != null)
+            if (surname != null && district != null && address != null && phone != null && installPayment != null &&
+                contractNum != null && contractDate != null && monthlyFee != null && lastPaymentDay != null &&
+                surname.Value != "" && district.Value != "" && address.Value != "" && phone.Value != "" &&
+                contractNum.Value != "" && contractDate.Value != "" && monthlyFee.Value != "")
             {
                 info = "Фамилия: " + surname.Value + Environment.NewLine +
                     "Район: " + district.Value + Environment.NewLine +
@@ -110,21 +112,6 @@ namespace Lab8_LINQ
             del.Show();
         }
         /// <summary>
-        /// Сохранение файла данных
-        /// </summary>
-        private void OnSaveClick(object sender, EventArgs e)
-        {
-            try
-            {
-                XDocument.Load(source).Save(source);
-                MessageBox.Show("Изменения успешно сохранены!");
-            }
-            catch
-            {
-                MessageBox.Show("Ошибка сохранения");
-            }
-        }
-        /// <summary>
         /// Метод, который выводит на экран, найденных абонентов
         /// </summary>
         /// <param name="paramIndex">номер параметра для сравнения</param>
@@ -150,10 +137,17 @@ namespace Lab8_LINQ
                     break;
             }
             this.tableView.Text = "";
-            var res = XDocument.Load(source).Element("subscribers").Elements("subscriber").Where(s => s.Element(param).Value.ToLower().Contains(str.ToLower()));
-            foreach (XElement xe in res)
+            try
             {
-                this.tableView.Text += getSubsInfo(xe);
+                var res = XDocument.Load(source).Element("subscribers").Elements("subscriber").Where(s => s.Element(param).Value.ToLower().Contains(str.ToLower()));
+                foreach (XElement xe in res)
+                {
+                    tableView.Text += getSubsInfo(xe);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка:\n" + ex.Message, "Ошибка");
             }
         }
         public void setText(string str)

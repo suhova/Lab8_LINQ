@@ -27,8 +27,7 @@ namespace Lab8_LINQ
         private System.Windows.Forms.ToolStripMenuItem setSearchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.TextBox tableView;
+        public System.Windows.Forms.TextBox tableView;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         /// <summary>
@@ -44,7 +43,6 @@ namespace Lab8_LINQ
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableView = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,8 +53,7 @@ namespace Lab8_LINQ
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchToolStripMenuItem,
             this.addToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.deleteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -102,16 +99,11 @@ namespace Lab8_LINQ
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.deleteToolStripMenuItem.Text = "Удалить";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.saveToolStripMenuItem.Text = "Сохранить";
+
             // 
             // tableView
             // 
-            this.tableView.Anchor = AnchorStyles.Left|AnchorStyles.Right|AnchorStyles.Bottom|AnchorStyles.Top;
+            this.tableView.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             this.tableView.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tableView.Location = new System.Drawing.Point(12, 31);
             this.tableView.Multiline = true;
@@ -120,7 +112,7 @@ namespace Lab8_LINQ
             this.tableView.TabStop = false;
             this.tableView.Size = new System.Drawing.Size(776, 407);
             this.tableView.TabIndex = 1;
-            this.tableView.ScrollBars =ScrollBars.Vertical;
+            this.tableView.ScrollBars = ScrollBars.Vertical;
             // 
             // MainForm
             // 
@@ -132,7 +124,7 @@ namespace Lab8_LINQ
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "XMLViewer";
             this.Text = "Список абонентов кабельного TV";
-            this.MinimumSize= new System.Drawing.Size(300, 500);
+            this.MinimumSize = new System.Drawing.Size(300, 500);
             this.menuStrip1.ResumeLayout(true);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(true);

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<subscribers>
+  <subscriber>
+    <surname>Квашонкин</surname>
+    <district>Василеостровский</district>
+    <address>Большой пр. ВО, д. 14</address>
+    <phone>88005551515</phone>
+    <contractNum>4</contractNum>
+    <installPayment>600</installPayment>
+    <contractDate>22.02.2003</contractDate>
+    <monthlyFee>1400</monthlyFee>
+    <lastPaymentDay>13.02.2016</lastPaymentDay>
+  </subscriber>
+  <subscriber>
+    <surname>Бухаров</surname>
+    <district>Красногвардейский</district>
+    <address>Среднеохтинский пр., д 10</address>
+    <phone>88005550505</phone>
+    <contractNum>5</contractNum>
+    <installPayment>340</installPayment>
+    <contractDate>12.10.2004</contractDate>
+    <monthlyFee>1300</monthlyFee>
+    <lastPaymentDay>30.12.2016</lastPaymentDay>
+  </subscriber>
+</subscribers>

@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -31,7 +29,8 @@ namespace Lab8_LINQ
             IEnumerable<XElement> deleteQuery = null;
             try
             {
-                XDocument xdoc = XDocument.Load(context.source);
+                XDocument xdoc = XDocument.Load(MainForm.source);
+                context.showAll(null, null);
                 deleteQuery = xdoc.Element("subscribers").Elements("subscriber").Where(s => s.Element("contractNum").Value == delTxtBox.Text);
 
                 if (deleteQuery.Count() == 0)
@@ -45,7 +44,8 @@ namespace Lab8_LINQ
                         try
                         {
                             MessageBox.Show("Удалён абонент: \n" + context.getSubsInfo(query), "Удаление...");
-                            query.RemoveAll();
+                            query.Remove();
+                            xdoc.Save(MainForm.source);
                         }
                         catch (Exception ex)
                         {

@@ -55,5 +55,15 @@
     <monthlyFee>1300</monthlyFee>
     <lastPaymentDay>30.12.2016</lastPaymentDay>
   </subscriber>
-  <subscriber />
+  <subscriber>
+    <surname>r</surname>
+    <district>rr</district>
+    <address>4</address>
+    <phone>r</phone>
+    <contractNum>rr</contractNum>
+    <installPayment>r</installPayment>
+    <contractDate>r</contractDate>
+    <monthlyFee>r</monthlyFee>
+    <lastPaymentDay>r</lastPaymentDay>
+  </subscriber>
 </subscribers>

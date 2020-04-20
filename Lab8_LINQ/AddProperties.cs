@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -43,7 +38,7 @@ namespace Lab8_LINQ
                     "Дата последнего платежа: " + lastPaymentDayTxtBox.Text + Environment.NewLine + Environment.NewLine;
                 try
                 {
-                    XDocument xdoc = XDocument.Load(context.source);
+                    XDocument xdoc = XDocument.Load(MainForm.source);
                     xdoc.Element("subscribers").Add(new XElement("subscriber",
                         new XElement("surname", surnameTxtBox.Text),
                         new XElement("district", districtTxtBox.Text),
@@ -55,6 +50,7 @@ namespace Lab8_LINQ
                         new XElement("monthlyFee", monthlyFeeTxtBox.Text),
                         new XElement("lastPaymentDay", lastPaymentDayTxtBox.Text)));
                     context.setText(result);
+                    xdoc.Save(MainForm.source);
                 } catch
                 {
                     MessageBox.Show("Ошибка записи в файл");
